@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--- Meta Tags --->
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="typescript-vite-crud">
+  <meta name="keywords" content="typescript, vite, crud">
+  <meta name="author" content="Stiward R.">
+  <title>Typescript-Vite-Crud App</title>
+  <!--- Tailwind JS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-zinc-900 text-white">
+  <div class="flex items-center justify-center h-screen gap-x-2">
+    <div class="bg-zinc-700 p-10 rounded-md max-w-md">
+      <h1 class="text-2xl text-center py-2">Create Task</h1>
+      <form action="" method="post" id="task_form">
+
+        <label for="title" class="block">Title</label>
+        <input type="text" class="bg-gray-800 px-1 py-2 w-full rounded-md mb-4" name="title" id="title"
+          placeholder="Title" autofocus required />
+
+        <label for="description" class="block">Description</label>
+        <textarea class="bg-gray-800 px-1 py-2 w-full rounded-md mb-4" name="description" id="description" rows="3"
+          placeholder="Description" required></textarea>
+
+        <button type="submit" class="bg-blue-600 px-3 py-1 w-full h-10 rounded-md text-white hover:bg-blue-500">Create</button>
+      </form>
+    </div>
+
+    <div class="bg-zinc-700 rounded-md max-w-md w-full h-3/5 p-10 overflow-y-scroll" id="task_list"></div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
